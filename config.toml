@@ -13,8 +13,8 @@ theme = "cupper-hugo-theme"
   quality = 99
 
 [params]
-  description = "Homepage and blog for Rony Batista"
-  homeMetaContent = "Homepage and blog for Rony Batista"
+  description = "Homepage and blog for Rony Batista."
+  homeMetaContent = "Homepage and blog for Rony Batista."
   # footer = "Copyright 2019©"
   # For more date formats see https://gohugo.io/functions/format/
   dateFormat = "Jan 2, 2006"
