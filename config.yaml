@@ -1,0 +1,73 @@
+baseURL: https://rony.dev
+languageCode: en-us
+defaultContentLanguage: en
+title: Rony Batista
+theme: cupper-hugo-theme 
+disqusShortname: rony-batista 
+
+taxonomies:
+  tag: tags
+
+permalinks:
+  post: /:filename
+
+imaging:
+  quality: 99
+
+params:
+  description: AHomepage and blog for Rony Batista.
+  homeMetaContent: Homepage and blog for Rony Batista.
+  # footer: Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme). Deployed to [Netlify](https://www.netlify.com/).
+  # For more date formats see https://gohugo.io/functions/format/
+  dateFormat: Jan 2, 2006
+  codePenUser: ronyb29
+  # katex: true
+
+menu:
+  nav: 
+    - name: Blog
+      url: /post/
+      weight: 1
+    - name: Twitter
+      url: https://twitter.com/ronyb29
+      weight: 2
+    - name: Tags
+      url: /tags/
+      weight: 3
+    - name: About Me
+      url: /
+      weight: 4
+    - name: RSS
+      url: /index.xml
+      weight: 5
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xHTML: false
+  highlight:
+    codeFences: false
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: false
+    style: monokai
+    tabWidth: 4
+  tableOfContents:
+    endLevel: 6
+    startLevel: 2
