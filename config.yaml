@@ -15,7 +15,7 @@ imaging:
   quality: 99
 
 params:
-  description: AHomepage and blog for Rony Batista.
+  description: Homepage and blog for Rony Batista.
   homeMetaContent: Homepage and blog for Rony Batista.
   # footer: Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme). Deployed to [Netlify](https://www.netlify.com/).
   # For more date formats see https://gohugo.io/functions/format/
