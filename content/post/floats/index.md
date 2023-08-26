@@ -12,7 +12,7 @@ The code shown in this post is available at <a href=https://github.com/ronyb29/p
 Some time ago, trying to communicate with a Microchip MCU I noticed all of the float values were wrong. The rest of the fields were fine, just the float values were getting scrambled. After looking around a bit I ended up talking to [Chris](https://github.com/chrsalx/), who I recalled having a similar problem in the past, he told me the float format for some of Microchip's products is different that the standard moderns computers use. Well, that sucks, but maybe we can do something.
 
 ### Why different float formats?
-Many MCUs don't have hardware support for floating point operations, including the microchip PIC16/17 families. Instead float support is implemented in software. At some point Microchip released an application note ([AN575](http://ww1.microchip.com/downloads/en/AppNotes/00575.pdf)), so some people just call the format AN575, here they use a different memory layout in favor of performance, which sounds a little crazy, but remember we're talking MHz here and some of the operations might still take almost a thousand cycles, so every tick counts.
+Many MCUs don't have hardware support for floating point operations, including the microchip PIC16/17 families. Instead, float support is implemented in software. At some point Microchip released an application note ([AN575](http://ww1.microchip.com/downloads/en/AppNotes/00575.pdf)), so some people just call the format AN575, here they use a different memory layout in favor of performance, which sounds a little crazy, but remember we're talking MHz here and some of the operations might still take almost a thousand cycles, so every tick counts.
 
 <blockquote>
 
