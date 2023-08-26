@@ -2,8 +2,7 @@ baseURL: https://rony.dev
 languageCode: en-us
 defaultContentLanguage: en
 title: Rony Batista
-theme: cupper-hugo-theme 
-disqusShortname: rony-batista 
+theme: cupper-hugo-theme
 
 taxonomies:
   tag: tags
@@ -17,11 +16,12 @@ imaging:
 params:
   description: Homepage and blog for Rony Batista.
   homeMetaContent: Homepage and blog for Rony Batista.
-  # footer: Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme). Deployed to [Netlify](https://www.netlify.com/).
-  # For more date formats see https://gohugo.io/functions/format/
   dateFormat: Jan 2, 2006
   codePenUser: ronyb29
-  # katex: true
+  utterances:
+    repo: username/username.github.io
+    issueTerm: title
+    theme: github-light
 
 menu:
   nav: 
