@@ -14,32 +14,29 @@ imaging:
   quality: 99
 
 params:
-  description: Homepage and blog for Rony Batista.
+  description: Rony Batista
   homeMetaContent: Homepage and blog for Rony Batista.
   dateFormat: Jan 2, 2006
   codePenUser: ronyb29
+  defaultDarkTheme: true
+  moveFooterToHeader: false
   utterances:
-    repo: username/username.github.io
+    repo: ronyb29/blog
     issueTerm: title
-    theme: github-light
+    theme: github-dark
+
 
 menu:
   nav: 
-    - name: Blog
-      url: /post/
-      weight: 1
-    - name: Twitter
-      url: https://twitter.com/ronyb29
-      weight: 2
-    - name: Tags
-      url: /tags/
-      weight: 3
     - name: About Me
       url: /
-      weight: 4
-    - name: RSS
-      url: /index.xml
-      weight: 5
+      weight: 1
+    - name: Blog
+      url: /post/
+      weight: 2
+    - name: Twitter
+      url: https://twitter.com/ronyb29
+      weight: 3
 
 markup:
   defaultMarkdownHandler: goldmark

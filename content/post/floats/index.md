@@ -5,18 +5,21 @@ date: 2020-01-10T17:00:00
 tags: ["float", "ieee754", "AN575", "python", "ctypes"]
 ---
 
-{{<blockquote>}}
+<blockquote>
 The code shown in this post is available at <a href=https://github.com/ronyb29/pyAN575>ronyb29/pyAN575</a> and in PyPI as <a>pyAN575</a>
-{{</blockquote>}}
+</blockquote>
 
 Some time ago, trying to communicate with a Microchip MCU I noticed all of the float values were wrong. The rest of the fields were fine, just the float values were getting scrambled. After looking around a bit I ended up talking to [Chris](https://github.com/chrsalx/), who I recalled having a similar problem in the past, he told me the float format for some of Microchip's products is different that the standard moderns computers use. Well, that sucks, but maybe we can do something.
 
 ### Why different float formats?
 Many MCUs don't have hardware support for floating point operations, including the microchip PIC16/17 families. Instead float support is implemented in software. At some point Microchip released an application note ([AN575](http://ww1.microchip.com/downloads/en/AppNotes/00575.pdf)), so some people just call the format AN575, here they use a different memory layout in favor of performance, which sounds a little crazy, but remember we're talking MHz here and some of the operations might still take almost a thousand cycles, so every tick counts.
 
-{{<blockquote author="Testa, Frank J., \"IEEE 754 Compliant Floating Point Routines\", Microchip, 1997">}}
+<blockquote>
+
 Because of the inherent byte structure of the PIC16/17 families of MCUs,  more  efficient  code  was  possible  by adopting the above formats rather than strictly adhering to the IEEE standard.
-{{</blockquote>}}
+
+<br/>-- Testa, Frank J., "IEEE 754 Compliant Floating Point Routines", Microchip, 1997
+</blockquote>
 
 To understand what we can do let's explore what the differences are, after all the application note implies that the difference is just a small optimization.
 
@@ -31,7 +34,7 @@ Both formats store floats as 32 bit values with 3 homologous fields: sign, expon
 It seems simple enough to de-scramble the pieces and convert them back and forth. Let's take a look at how I did it in Python.
 
 ### Structs and bit fields
-I think what we need here is a special kind of struct called a [bit field](https://en.wikipedia.org/wiki/Bit_field), this is basically a struct that has different bit lengths specified for its values. If you've read some C code before, specially if it was intended to interact with hardware, you might have seem something like this:
+I think what we need here is a special kind of struct called a [bit field](https://en.wikipedia.org/wiki/Bit_field), this is basically a struct that has different bit lengths specified for its values. If you've read some C code before, specially if it was intended to interact with hardware, you might have seen something like this:
 
 ```c
 #include <stdio.h>

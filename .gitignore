@@ -2,6 +2,8 @@
 # gitginore template for Hugo projects
 # website: https://gohugo.io
 
+.idea/
+
 # generated files by hugo
 /public/
 /resources/_gen/

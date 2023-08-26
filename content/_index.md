@@ -6,7 +6,7 @@ draft: false
 
 Hi,
 
-Im Rony, a Software Engineer from Santo Domingo. I learned how to code in high school and feel in love with software since then. I like learning new things and experimenting, both tech and non tech. I consider myself a pragmatic person.
+I'm Rony, a Software Engineer from Santo Domingo. I learned how to code in high school and feel in love with software since then. I like learning new things and experimenting, both tech and non tech. I consider myself a pragmatic person.
 
 
 
